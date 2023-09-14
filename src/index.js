@@ -4,7 +4,6 @@ import { ReactFlowProvider } from "react-flow-renderer";
 
 import Toolbar from "./components/Toolbar";
 import CampaignProfile from "./CampaignProfile";
-import FullScreen from "./FullScreen";
 import "./styles.css";
 
 import steps from "./campaign";
@@ -16,10 +15,6 @@ const App = () => {
     <ReactFlowProvider>
       {mode === "profile" && <CampaignProfile steps={steps} />}
       <Toolbar currentMode={mode} changeMode={setMode} />
-
-      {/* { mode === 'fullscreen' && (
-        <FullScreen steps={steps} />
-      )} */}
     </ReactFlowProvider>
   );
 };
