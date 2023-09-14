@@ -9,8 +9,9 @@ import {
   TableRow,
   TableCell,
   Grid,
-  makeStyles,
-} from '@material-ui/core';
+} from '@mui/material';
+
+import {makeStyles} from '@mui/styles';
 
 const useStyles = makeStyles({
   popoverPaper: {
@@ -135,17 +136,6 @@ const Popover = ({ anchor, onClose, nodeData }) => {
                   <TableCell style={{ textAlign: 'right'}}>{formatDecimal(value / data.data.potentialTarget * 100)} %</TableCell>
                 </TableRow>
               ))}
-              <TableRow>
-                <TableCell style={{ padding: 0}}>
-                  <div style={{
-                    border: `5px solid #cccccc`,
-                    borderRadius: 5
-                  }}/>
-                </TableCell>
-                <TableCell>Not Reached</TableCell>
-                <TableCell style={{ textAlign: 'right'}}>{ notReachedValue }</TableCell>
-                <TableCell style={{ textAlign: 'right'}}>{formatDecimal(notReachedValue / data.data.potentialTarget * 100)} %</TableCell>
-              </TableRow>
             </TableBody>
           </Table>
         </TableContainer>

@@ -25,7 +25,7 @@ const Node = ({ data: nodeData }) => {
   return (
     <>
       <div className="node-container">
-        <div className={`node-status node-status-${nodeData.phase.toLowerCase()}`}>
+        <div className={`node-status node-status-${nodeData.phase.toLowerCase()}-${nodeData.status.toLowerCase()}`}>
           { nodeData.phase }
         </div>
         { nodeData.previous.length > 0 && (

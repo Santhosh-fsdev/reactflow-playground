@@ -8,7 +8,7 @@ import {
   TableRow,
   TableCell,
   Grid,
-} from '@material-ui/core';
+} from '@mui/material';
 
 import ProgressIcon from './ProgressIcon';
 
@@ -37,7 +37,7 @@ const FullNode = ({ data: nodeData }) => {
   return (
     <>
       <div className="node-container">
-        <div className={`node-status node-status-${nodeData.phase.toLowerCase()}`}>
+        <div className={`node-status node-status-${nodeData.phase.toLowerCase()}-${nodeData.status.toLowerCase()}`}>
           { nodeData.phase }
         </div>
         { nodeData.previous.length > 0 && (
@@ -137,17 +137,6 @@ const FullNode = ({ data: nodeData }) => {
                     <TableCell style={{ fontSize: '10px', textAlign: 'right'}}>{formatDecimal(value / nodeData.data.potentialTarget * 100)} %</TableCell>
                   </TableRow>
                 ))}
-                <TableRow>
-                  <TableCell style={{ padding: 0}}>
-                    <div style={{
-                      border: `5px solid #cccccc`,
-                      borderRadius: 5
-                    }}/>
-                  </TableCell>
-                  <TableCell style={{ fontSize: '10px'}}>Not Reached</TableCell>
-                  <TableCell style={{ fontSize: '10px', textAlign: 'right'}}>{ notReachedValue }</TableCell>
-                  <TableCell style={{ fontSize: '10px', textAlign: 'right'}}>{formatDecimal(notReachedValue / nodeData.data.potentialTarget * 100)} %</TableCell>
-                </TableRow>
               </TableBody>
             </Table>
           </TableContainer>

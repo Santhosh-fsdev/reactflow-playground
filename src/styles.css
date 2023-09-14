@@ -106,7 +106,23 @@ body {
   color: white;
 }
 
-.node-status-execution {
+.node-status-extraction-completed, .node-status-validation-completed, 
+.node-status-transformation-completed, .node-status-mapping-completed, .node-status-target-load-completed{
   background-color: green;
   color: white;
+}
+.node-status-extraction-inprogress, .node-status-validation-inprogress,
+ .node-status-transformation-inprogress, .node-status-mapping-inprogress, .node-status-target-load-inprogress{
+  background-color: rgb(255, 123, 0);
+  color: white;
+}
+ .node-status-extraction-failed, .node-status-validation-failed, 
+ .node-status-transformation-failed, .node-status-mapping-failed, .node-status-target-load-failed{
+  background-color: red;
+  color: white;
+}
+.node-status-extraction-not-started, .node-status-validation-not-started, 
+.node-status-transformation-not-started, .node-status-mapping-not-started, .node-status-target-load-not-started{
+ background-color: grey;
+ color: white;
 }

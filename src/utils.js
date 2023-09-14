@@ -4,6 +4,7 @@ const generateFlow = (width, height, data) => {
   const flow = new dagre.graphlib.Graph();
   flow.setGraph({
     rankdir: 'LR',
+    align:'UR'
   });
   flow.setDefaultEdgeLabel(() => ({}));
   // Set nodes

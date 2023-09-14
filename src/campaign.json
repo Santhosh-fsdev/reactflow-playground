@@ -1,57 +1,28 @@
 [
   {
     "id": 1,
-    "type": "email-1to1",
-    "name": "Email 1to1",
-    "contentName": "OME Forum 08/06/21 > Votre invitation à l’OME Forum le 8 juin",
-    "phase": "Execution",
+    "type": "survey",
+    "name": "Extraction",
+    "contentName": "",
+    "phase": "Extraction",
+    "status":"Completed",
     "date": {
-      "from": "01/06",
-      "to": "15/06"
+      "from": "01/06 10.47.23",
+      "to": "01/06 10.47.26"
     },
     "previous": [], 
     "data": {
      "target": 2000,
      "potentialTarget": 2000,
      "percentOK": {
-       "label": "CTOR",
-       "value": 10
-     },
+      "label": "Pass %",
+      "value": 10
+    },
      "analytics": [
        {
-         "label": "Accepted",
-         "color": "#003f5c",
-         "value": 200
-       },
-       {
-        "label": "Refused",
-        "color": "#d45087",
-        "value": 10
-       },
-       {
-        "label": "Unsubscribed",
-        "color": "#ffa600",
-        "value": 5
-       },
-       {
-        "label": "Opened",
-        "color": "#665191",
-        "value": 500
-       },
-       {
-        "label": "Not Opened",
-        "color": "#a05195",
-        "value": 600
-       },
-       {
-        "label": "Bounced",
-        "color": "#ff7c43",
-        "value": 485
-       },
-       {
-        "label": "Target Lost",
-        "color": "#f95d6a",
-        "value": 200
+         "label": "Passed",
+         "color": "green",
+         "value": 2000
        }
      ]
     }
@@ -59,216 +30,146 @@
   {
     "id": 2,
     "previous": [
-      { "stepId": 1, "count": 500, "label": "Opened" }
+      { "stepId": 1, "count": 2000, "label": "Processed" }
     ],
-    "type": "automated-email",
-    "name": "Automated Email",
-    "contentName": "Echanges Franco Belges Connexion 26/05 > Vos informations de connexion : Échanges Franco Belges",
-    "phase": "Execution",
+    "type": "survey",
+    "name": "Validation",
+    "contentName": "",
+    "phase": "Validation",
+    "status":"InProgress",
     "date": {
-      "from": "10/06",
-      "to": "20/06"
+      "from": "01/06 10.47.30",
+      "to": "01/06 10.47.42"
     },
     "data": {
-     "target": 100,
-     "potentialTarget": 500,
+     "target": 2000,
+     "potentialTarget": 2000,
      "percentOK": {
-       "label": "CTOR",
-       "value": 40
-     },
+      "label": "Pass %",
+      "value": 10
+    },
      "analytics": [
-      {
-        "label": "Accepted",
-        "color": "#003f5c",
-        "value": 40
-      },
-      {
-       "label": "Refused",
-       "color": "#d45087",
-       "value": 2
-      },
-      {
-       "label": "Unsubscribed",
-       "color": "#ffa600",
-       "value": 0
-      },
        {
-        "label": "Opened",
-        "color": "#58508d",
-        "value": 48
+         "label": "Passed",
+         "color": "green",
+         "value": 1500
        },
        {
-        "label": "Not Opened",
-        "color": "#bc5090",
-        "value": 10
-       },
-       {
-        "label": "Bounced",
-        "color": "#ff6361",
-        "value": 0
-       }
+        "label": "Failed",
+        "color": "red",
+        "value": 500
+      }
+       
      ]
     }
   },
   {
     "id": 3,
     "previous": [
-      { "stepId": 2, "count": 40, "label": "Accepted" }
+      { "stepId": 2, "count": 1500, "label": "Processed" }
     ],
-    "type": "sms",
-    "name": "SMS",
-    "phase": "Execution",
+    "type": "survey",
+    "name": "Mapping",
+    "contentName": "",
+    "phase": "Mapping",
+    "status":"Failed",
     "date": {
-      "from": "15/06",
-      "to": "30/06"
+      "from": "01/06 10.47.35",
+      "to": "01/06 10.47.50"
     },
     "data": {
-     "target": 30,
-     "potentialTarget": 40,
+     "target": 1500,
+     "potentialTarget": 1500,
      "percentOK": {
-        "label": "CTOR",
-        "value": 20
-      },
+      "label": "Pass %",
+      "value": 10
+    },
      "analytics": [
        {
-        "label": "Accepted",
-        "color": "#003f5c",
-        "value": 6
+         "label": "Passed",
+         "color": "green",
+         "value": 1000
        },
        {
-        "label": "Opened",
-        "color": "#58508d",
-        "value": 14
-       },
-       {
-        "label": "Not opened",
-        "color": "#bc5090",
-        "value": 10
-       },
-       {
-        "label": "Bounced",
-        "color": "#ff6361",
-        "value": 0
-       }
+        "label": "Failed",
+        "color": "red",
+        "value": 500
+      }
+       
      ]
     }
   },
   {
     "id": 4,
     "previous": [
-      { "stepId": 1, "count": 200, "label": "Accepted" }
+      { "stepId": 3, "count": 1500, "label": "Processed" }
     ],
     "type": "survey",
-    "name": "Survey",
-    "phase": "Execution",
+    "name": "Transformation",
+    "contentName": "",
+    "phase": "Transformation",
+    "status":"Not-Started",
     "date": {
-      "from": "1/06",
-      "to": "20/06"
+      "from": "01/06 10.47.35",
+      "to": "01/06 10.47.50"
     },
     "data": {
-      "target": 150,
-      "potentialTarget": 200,
-      "percentOK": {
-         "label": "Submitted",
-         "value": 73
+     "target": 1500,
+     "potentialTarget": 1500,
+     "percentOK": {
+      "label": "Pass %",
+      "value": 10
+    },
+     "analytics": [
+       {
+         "label": "Passed",
+         "color": "green",
+         "value": 1000
        },
-      "analytics": [
-        {
-          "label": "Submitted",
-          "color": "#003f5c",
-          "value": 110
-        },
-        {
-          "label": "Not Submitted",
-          "color": "#58508d",
-          "value": 33
-        },
-        {
-          "label": "CSAT",
-          "color": "#bc5090",
-          "value": 7
-        },
-        {
-          "label": "NPS",
-          "color": "#ffa600",
-          "value": 0
-        }
-      ]
-     }
+       {
+        "label": "Failed",
+        "color": "red",
+        "value": 500
+      }
+       
+     ]
+    }
   },
   {
     "id": 5,
     "previous": [
-      { "stepId": 4, "count": 110, "label": "Submitted" }
+      { "stepId": 4, "count": 1500, "label": "Prcessed" }
     ],
-    "type": "call",
-    "name": "Call",
-    "phase": "Integration",
+    "type": "survey",
+    "name": "TargetLoad",
+    "contentName": "",
+    "phase": "Target-Load",
+    "status":"Not-Started",
     "date": {
-      "from": "10/06",
-      "to": "20/06"
+      "from": "01/06 10.47.35",
+      "to": "01/06 10.47.50"
     },
     "data": {
-      "target": 110,
-      "potentialTarget": 110,
-      "percentOK": {
-         "label": "Visited",
-         "value": 54
-       },
-      "analytics": [
-        {
-          "label": "Visited",
-          "color": "#003f5c",
-          "value": 60
-        },
-        {
-          "label": "Not Visited",
-          "color": "#ffa600",
-          "value": 50
-        }
-      ]
-    }
-  },
-  {
-    "id": 6,
-    "final": true,
-    "previous": [
-      { "stepId": 5, "count": 60, "label": "Visited" },
-      { "stepId": 3, "count": 6, "label": "Accepted" }
-    ],
-    "type": "event",
-    "name": "Event",
-    "phase": "Preparation",
-    "date": "30/06/2021",
-    "data": {
-      "target": 30,
-      "potentialTarget": 66,
-      "percentOK": {
-         "label": "Attended",
-         "value": 0
-       },
+     "target": 1500,
+     "potentialTarget": 1500,
+     "percentOK": {
+      "label": "Pass %",
+      "value": 10
+    },
      "analytics": [
-        {
-          "label": "Confirmed",
-          "color": "#58508d",
-          "value": 20
-        },
-        {
-          "label": "Cancelled",
-          "color": "#ffa600",
-          "value": 10
-        },
-        {
-          "label": "Not Attended",
-          "color": "#ff6361",
-          "value": 0
-        },
-        {
-          "label": "Attended",
-          "color": "#003f5c",
-          "value": 0
-        }
+       {
+         "label": "Passed",
+         "color": "green",
+         "value": 1000
+       },
+       {
+        "label": "Failed",
+        "color": "red",
+        "value": 500
+      }
+       
      ]
     }
   }
+
 ]
